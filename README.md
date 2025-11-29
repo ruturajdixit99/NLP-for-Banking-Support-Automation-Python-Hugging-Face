@@ -37,8 +37,6 @@ NLP_for_Banking/
 │ └── utils.py # helper scripts (optional)
 └── README.md
 
-yaml
-Copy code
 
 ---
 
@@ -48,19 +46,12 @@ The dataset is generated using message templates that mimic common customer supp
 
 Label Categories:
 card_lost_stolen
-
 transaction_dispute
-
 account_login_issue
-
 loan_inquiry
-
 account_update
-
 general_info
 
-perl
-Copy code
 
 Sample generated messages:  
 ➡ “Someone took my card, urgent block request.”  
@@ -69,15 +60,11 @@ Sample generated messages:
 ➡ “What is your home loan interest rate?”
 
 📄 First few rows:
-arduino
-Copy code
-                                           text             label
 0 Someone took my card, urgent block request. card_lost_stolen
 1 I lost my debit card yesterday, please block it. card_lost_stolen
 2 A payment I did not authorize appears… transaction_dispute
 
-yaml
-Copy code
+
 
 :contentReference[oaicite:0]{index=0}
 
@@ -91,9 +78,6 @@ We fine-tune **DistilBERT** using PyTorch for multi-class classification.
 Epoch 1/3, loss = 0.4411
 Epoch 2/3, loss = 0.1190
 Epoch 3/3, loss = 0.1173
-
-yaml
-Copy code
 
 ### 📊 Classification Report
 
@@ -124,8 +108,6 @@ Query: I lost my debit card what should I do
 Top FAQ match: How do I block a lost card?
 Answer: You can block your card immediately via the mobile app under 'Cards > Block card'
 
-yaml
-Copy code
 
 :contentReference[oaicite:2]{index=2}
 
@@ -192,3 +174,5 @@ python train_classifier.py
 
 # Step 3: Run semantic search demo
 python semantic_search_demo.py
+
+
